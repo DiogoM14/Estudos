@@ -1,21 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+
 import './App.css';
 import Person from './Person/Person';
-
-const StyledButton = styled.button`
-  background-color: ${props => props.alt ? 'red' : 'green'};
-    color: white;
-    font: inherit;
-    border: 1px solid blue;
-    padding: 8px;
-    cursor: pointer;
-    
-    &:hover {
-      background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
-      color: black;
-    }
-`;
 
 class App extends Component {
   state = {
@@ -97,9 +83,9 @@ class App extends Component {
 
         <p className={classes.join(' ')} >This is really working!</p>
 
-        <StyledButton
+        <button className="button"
         alt={this.state.showPersons}
-        onClick={this.togglePersonsHandler}>Mostrar/Esconder Cards</StyledButton>
+        onClick={this.togglePersonsHandler}>Mostrar/Esconder Cards</button>
 
         {/* Imprime a variavel persons */}
         {persons}
